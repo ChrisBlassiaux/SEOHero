@@ -1,5 +1,10 @@
+let idStocked;
 function openModal(id) {
   document.getElementById(id).classList.add("active");
+  if (idStocked) {
+    document.getElementById(idStocked).classList.remove("active");
+  }
+  idStocked = id;
 }
 
 function closeModal(id) {
@@ -22,7 +27,11 @@ function updatePreview() {
     userDescription.textContent = "(Description non définie)";
   }
 
-  if (code.includes("alt=")) score += 10;
+  if (code.includes("alt=")) {
+    score += 10;
+    document.querySelector(".practice-item-2").innerHTML =
+      "✅ Attribut alt pour les images détecté.";
+  }
   if (code.includes("<title>") && !code.includes("<title></title>")) score += 5;
   if (code.includes("<h1>")) score += 5;
   if (code.includes('<meta name="viewport"')) score += 5;
@@ -30,9 +39,9 @@ function updatePreview() {
   userSite.setAttribute("data-score", score);
   updateRanking();
 
-  if (score >= 120) {
-    alert("🎉 Félicitations ! Votre site est en tête du classement SEO !");
-  }
+  // if (score >= 120) {
+  //   alert("🎉 Félicitations ! Votre site est en tête du classement SEO !");
+  // }
 }
 
 function updateRanking() {

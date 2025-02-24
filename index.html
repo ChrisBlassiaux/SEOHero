@@ -11,19 +11,19 @@
       <h2>📝 Éditez votre code HTML :</h2>
       <div class="best-practices">
         <h3>💡 Bonnes pratiques SEO :</h3>
-        <div class="practice-item" onclick="openModal('descriptionModal')">
+        <div class="practice-item practice-item-1" onclick="openModal('descriptionModal')">
           ❌ Ajoutez une balise meta description.
         </div>
-        <div class="practice-item" onclick="openModal('altModal')">
-          ✅ Attribut alt pour les images détecté.
+        <div class="practice-item practice-item-2" onclick="openModal('altModal')">
+          ❌ Attribut alt pour les images détecté.
         </div>
-        <div class="practice-item" onclick="openModal('titleModal')">
+        <div class="practice-item practice-item-3" onclick="openModal('titleModal')">
           ✅ Titre de la page pertinent détecté.
         </div>
-        <div class="practice-item" onclick="openModal('h1Modal')">
+        <div class="practice-item practice-item-4" onclick="openModal('h1Modal')">
           ✅ Balise H1 détectée.
         </div>
-        <div class="practice-item" onclick="openModal('viewportModal')">
+        <div class="practice-item practice-item-5" onclick="openModal('viewportModal')">
           ❌ Ajoutez la balise meta viewport pour le responsive.
         </div>
       </div>
@@ -33,23 +33,27 @@
 <head>
   <title>Mon Super Site</title>
   <style>
-    body { background-color: #f9fbe7; color: #333; padding: 20px; }
-    h1 { color: #3f51b5; }
+    body { background-color: #f9fbe7; color: #073734; padding: 20px; }
+    h1 { color: #073734; }
     p { line-height: 1.6; }
+    img {
+  width: 100%;
+  }
   </style>
 </head>
 <body>
   <h1>Bienvenue sur mon site</h1>
-  <img src="image.jpg">
+  <img src="./images/image.jpg">
   <p>Ceci est un site web à optimiser pour le SEO avec du contenu supplémentaire.</p>
   <p>Apprenez à intégrer des pratiques SEO efficaces, telles que l'utilisation correcte des balises et l'accessibilité des images.</p>
 </body>
-</html></textarea
+</html>
+</textarea
       >
       <button onclick="updatePreview()">🚀 Tester & Vérifier</button>
     </div>
     <div class="results">
-      <h2>🔎 Classement SEO (Style Google) :</h2>
+      <h2>🔎 Classement SEO :</h2>
       <div class="search-simulation">
         <ul class="ranking-list" id="rankingList">
           <li class="ranking-item" data-score="120">
