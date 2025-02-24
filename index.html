@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO Hero - Apprenez le SEO en Jouant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="editor">
+      <h2>📝 Éditez votre code HTML :</h2>
+      <div class="best-practices">
+        <h3>💡 Bonnes pratiques SEO :</h3>
+        <div class="practice-item" onclick="openModal('descriptionModal')">
+          ❌ Ajoutez une balise meta description.
+        </div>
+        <div class="practice-item" onclick="openModal('altModal')">
+          ✅ Attribut alt pour les images détecté.
+        </div>
+        <div class="practice-item" onclick="openModal('titleModal')">
+          ✅ Titre de la page pertinent détecté.
+        </div>
+        <div class="practice-item" onclick="openModal('h1Modal')">
+          ✅ Balise H1 détectée.
+        </div>
+        <div class="practice-item" onclick="openModal('viewportModal')">
+          ❌ Ajoutez la balise meta viewport pour le responsive.
+        </div>
+      </div>
+      <textarea id="codeArea">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Mon Super Site</title>
+  <style>
+    body { background-color: #f9fbe7; color: #333; padding: 20px; }
+    h1 { color: #3f51b5; }
+    p { line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur mon site</h1>
+  <img src="image.jpg">
+  <p>Ceci est un site web à optimiser pour le SEO avec du contenu supplémentaire.</p>
+  <p>Apprenez à intégrer des pratiques SEO efficaces, telles que l'utilisation correcte des balises et l'accessibilité des images.</p>
+</body>
+</html></textarea
+      >
+      <button onclick="updatePreview()">🚀 Tester & Vérifier</button>
+    </div>
+    <div class="results">
+      <h2>🔎 Classement SEO (Style Google) :</h2>
+      <div class="search-simulation">
+        <ul class="ranking-list" id="rankingList">
+          <li class="ranking-item" data-score="120">
+            <a href="#" class="site-title">SuperBlog - Recettes Délicieuses</a
+            ><br />
+            <span class="site-url">www.superblog.com</span><br />
+            <span class="site-description"
+              >Découvrez des recettes faciles et gourmandes pour tous les
+              jours.</span
+            >
+          </li>
+          <li class="ranking-item" data-score="110">
+            <a href="#" class="site-title"
+              >Voyage Facile - Destinations Rêvées</a
+            ><br />
+            <span class="site-url">www.voyagefacile.com</span><br />
+            <span class="site-description"
+              >Des conseils pratiques pour organiser vos prochaines
+              vacances.</span
+            >
+          </li>
+          <li class="ranking-item user-site" data-score="100">
+            <a href="#" class="site-title">Votre Site - Mon Super Site</a><br />
+            <span class="site-url">www.votresite.com</span><br />
+            <span class="site-description" id="user-description"
+              >(Description non définie)</span
+            >
+          </li>
+          <li class="ranking-item" data-score="90">
+            <a href="#" class="site-title">TechNews - Dernières Innovations</a
+            ><br />
+            <span class="site-url">www.technews.com</span><br />
+            <span class="site-description"
+              >Restez informé des dernières nouveautés technologiques.</span
+            >
+          </li>
+          <li class="ranking-item" data-score="80">
+            <a href="#" class="site-title">Fitness Pro - Santé et Bien-être</a
+            ><br />
+            <span class="site-url">www.fitnesspro.com</span><br />
+            <span class="site-description"
+              >Des astuces et conseils pour une vie active et saine.</span
+            >
+          </li>
+        </ul>
+      </div>
+      <iframe id="preview"></iframe>
+    </div>
+
+    <!-- Modales explicatives -->
+    <div id="descriptionModal" class="modal">
+      <span class="modal-close" onclick="closeModal('descriptionModal')"
+        >&times;</span
+      >
+      <h3>Meta Description</h3>
+      <p>
+        La balise meta description aide les moteurs de recherche à comprendre le
+        contenu de votre page. Ajoutez-la dans la section &lt;head&gt;.
+      </p>
+    </div>
+    <div id="altModal" class="modal">
+      <span class="modal-close" onclick="closeModal('altModal')">&times;</span>
+      <h3>Attribut alt</h3>
+      <p>
+        L'attribut alt décrit les images et améliore l'accessibilité ainsi que
+        le SEO.
+      </p>
+    </div>
+    <div id="titleModal" class="modal">
+      <span class="modal-close" onclick="closeModal('titleModal')"
+        >&times;</span
+      >
+      <h3>Balise Title</h3>
+      <p>
+        La balise title donne un titre à votre page, visible dans les résultats
+        des moteurs de recherche.
+      </p>
+    </div>
+    <div id="h1Modal" class="modal">
+      <span class="modal-close" onclick="closeModal('h1Modal')">&times;</span>
+      <h3>Balise H1</h3>
+      <p>
+        La balise H1 est la plus importante pour structurer le contenu et
+        améliorer le SEO.
+      </p>
+    </div>
+    <div id="viewportModal" class="modal">
+      <span class="modal-close" onclick="closeModal('viewportModal')"
+        >&times;</span
+      >
+      <h3>Meta Viewport</h3>
+      <p>
+        La balise meta viewport garantit que votre site est responsive et bien
+        affiché sur tous les appareils.
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

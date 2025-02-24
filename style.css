@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #002730;
+  color: #ffffff;
+}
+.editor,
+.results {
+  width: 50%;
+  padding: 20px;
+  overflow-y: auto;
+}
+.editor {
+  border-right: 2px solid #97e1dc;
+  background-color: #073734;
+}
+.best-practices {
+  background-color: #15b4a2;
+  border: 1px solid #97e1dc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.practice-item {
+  cursor: pointer;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+.practice-item:hover {
+  background-color: #97e1dc;
+}
+textarea {
+  width: 100%;
+  height: 60vh;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  resize: none;
+}
+.results {
+  background-color: #073734;
+}
+.search-simulation {
+  background-color: #fff;
+  color: #002730;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+.ranking-list {
+  list-style: none;
+  padding: 0;
+}
+.ranking-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #97e1dc;
+  transition: transform 0.5s ease, top 0.5s ease;
+  position: relative;
+}
+.ranking-item.user-site {
+  background-color: #97e1dc;
+}
+.ranking-item.highlight {
+  background-color: #97e1dc;
+  transform: translateY(-20px);
+}
+iframe {
+  width: 100%;
+  height: 45vh;
+  border: 1px solid #97e1dc;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #15b4a2;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  color: #002730;
+  border: 1px solid #97e1dc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.modal.active {
+  display: block;
+}
+.modal-close {
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+  color: #aaa;
+}
